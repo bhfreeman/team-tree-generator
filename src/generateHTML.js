@@ -24,7 +24,8 @@ const footer = `        </div>
 </html>`
 
 function generateManager(data) {
-    return `<div class="box">
+    return `
+    <div class="box">
     <h1>Manager</h1>
     <h1>${data.name}</h1>
     <ul>
@@ -38,7 +39,8 @@ function generateManager(data) {
 }
 
 function generateEngineer(data){
-    return `<div class="box">
+    return `
+    <div class="box">
     <h1>Engineer</h1>
     <h1>${data.name}</h1>
     <ul>
@@ -51,7 +53,8 @@ function generateEngineer(data){
 }
 
 function generateIntern(data){
-    return `<div class="box">
+    return `
+    <div class="box">
     <h1>Intern</h1>
     <h1>${data.name}</h1>
     <ul>

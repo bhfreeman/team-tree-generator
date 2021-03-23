@@ -14,5 +14,9 @@ describe("Manager", () => {
             const e = new Manager('name', 12, 'email@email.com', officeNumber);
             expect(e.getOfficeNumber()).toBe(officeNumber);
         })
+        test('getRole method returns Manager', () => {
+            const e = new Manager('name',11,'email@email.com', 202);
+            expect(e.getRole()).toBe('Manager');
+        })
     })
 })
