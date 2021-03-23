@@ -30,7 +30,7 @@ function generateManager(data) {
     <h1>${data.name}</h1>
     <ul>
         <li>Id #: ${data.id}</li>
-        <li>Email: ${data.email}</li>
+        <li>Email: <a href="mailto:${data.email}">${data.email}</a></li>
         <li>Office Number: ${data.officeNumber}</li>
     </ul>
 </div>
@@ -45,8 +45,8 @@ function generateEngineer(data){
     <h1>${data.name}</h1>
     <ul>
         <li>Id #: ${data.id}</li>
-        <li>Email: ${data.email}</li>
-        <li>Github Username: ${data.github}</li>
+        <li>Email: <a href="mailto:${data.email}">${data.email}</a></li>
+        <li>Github Username: <a href="github.com/${data.github} target="__blank">${data.github}</a></li>
     </ul>
 </div>
 `
@@ -59,7 +59,7 @@ function generateIntern(data){
     <h1>${data.name}</h1>
     <ul>
         <li>${data.id}</li>
-        <li>Email: ${data.email}</li>
+        <li>Email: <a href="mailto:${data.email}">${data.email}</a></li>
         <li>Attedning: ${data.school}</li>
     </ul>
 </div>
