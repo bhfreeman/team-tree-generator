@@ -1,0 +1,60 @@
+*{
+    font-family: 'Roboto', sans-serif;
+
+}
+body{
+    margin: 0px
+}
+
+header{
+    text-align: center;
+    padding:0px;
+    background-color: black;
+    color: white;
+    margin: 0px ;
+    min-height: 100px;
+    flex-basis: 100%
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.box-container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.box {
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    border:solid black;
+}
+.box h1 {
+    background-color: black;
+    color: white;
+    margin: 0px;
+    text-align: center;
+}
+.box h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+ul{
+    padding: 0px 5px;
+}
+li{
+    list-style: none;  
+    text-align: center;
+    padding: 5px 0px;
+}

@@ -104,10 +104,9 @@ function promptLoop() {
               promptLoop()
           })
       } else {
-          htmlContent += `<div class='row'>`;
           engineers.forEach((item) => htmlContent+= generateHTML.generateEngineer(item));
           htmlContent += `</div>
-          <div class='row'>
+          <div class='box-container'>
           `
           interns.forEach((item) => htmlContent += generateHTML.generateIntern(item));
           htmlContent += generateHTML.footer;
@@ -132,7 +131,5 @@ const promptStart = () => {
     promptLoop();
   });
 };
-
-promptStart();
 
 module.exports = promptStart;
