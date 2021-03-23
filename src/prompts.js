@@ -1,4 +1,6 @@
 const inquirer = require("inquirer");
+const fs = require('fs');
+const generateHTML = require('./generateHTML');
 
 const Manager = require("../lib/Manager");
 const Engineer = require("../lib/Engineer");
@@ -87,6 +89,8 @@ const managers = [];
 const engineers = [];
 const interns = [];
 
+let htmlContent = ``;
+
 function promptLoop() {
   inquirer.prompt(endQuestion).then((data) => {
       if(data.selectNext === "Engineer"){
@@ -99,7 +103,17 @@ function promptLoop() {
               interns.push(new Intern(data.internName, data.internId, data.internEmail, data.school));
               promptLoop()
           })
-      } else return;
+      } else {
+          htmlContent += `<div class='row'>`;
+          engineers.forEach((item) => htmlContent+= generateHTML.generateEngineer(item));
+          htmlContent += `</div>
+          <div class='row'>
+          `
+          interns.forEach((item) => htmlContent += generateHTML.generateIntern(item));
+          htmlContent += generateHTML.footer;
+          fs.writeFile("./dist/index.html", htmlContent, ()=> console.log('written'));
+          return;
+      };
   });
 }
 
@@ -112,6 +126,9 @@ const promptStart = () => {
       data.officeNumber
     );
     managers.push(e);
+    htmlContent += generateHTML.header;
+    htmlContent += generateHTML.generateManager(managers[0]);
+    console.log(managers[0]);
     promptLoop();
   });
 };
