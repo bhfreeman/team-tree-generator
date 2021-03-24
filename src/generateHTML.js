@@ -58,9 +58,9 @@ function generateIntern(data){
     <h1>Intern</h1>
     <h1>${data.name}</h1>
     <ul>
-        <li>${data.id}</li>
+        <li>Id #: ${data.id}</li>
         <li>Email: <a href="mailto:${data.email}">${data.email}</a></li>
-        <li>Attedning: ${data.school}</li>
+        <li>Attending: ${data.school}</li>
     </ul>
 </div>
 `

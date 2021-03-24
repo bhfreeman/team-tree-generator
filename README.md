@@ -12,4 +12,4 @@ A simple cli that takes in user input and builds a team tree based on that input
 [HTML](https://github.com/bhfreeman/team-tree-generator/blob/main/dist/index.html)
 
 ## Youtube Link
-[Youtube]()
+[Youtube](https://youtu.be/5_T536PfKM8)
