@@ -101,7 +101,7 @@ function promptLoop() {
       } else if (data.selectNext === "Intern"){
           inquirer.prompt(internQuestions).then((data) => {
               interns.push(new Intern(data.internName, data.internId, data.internEmail, data.school));
-              promptLoop()
+              promptLoop();
           })
       } else {
           engineers.forEach((item) => htmlContent+= generateHTML.generateEngineer(item));

@@ -46,7 +46,7 @@ function generateEngineer(data){
     <ul>
         <li>Id #: ${data.id}</li>
         <li>Email: <a href="mailto:${data.email}">${data.email}</a></li>
-        <li>Github Username: <a href="github.com/${data.github} target="__blank">${data.github}</a></li>
+        <li>Github Username: <a href="https://github.com/${data.github}" target="__blank">${data.github}</a></li>
     </ul>
 </div>
 `
